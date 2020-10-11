@@ -1,0 +1,71 @@
+When
+    [Case
+        (Deposit
+            (AccountId
+                0
+                (PK "Canditate 1")
+            )
+            (Role "voterID")
+            (Token "1" "vote")
+            (ChoiceValue
+                (ChoiceId
+                    "1"
+                    (Role "voterID")
+                ))
+        )
+        Close ]
+    1
+    (When
+        [Case
+            (Deposit
+                (AccountId
+                    0
+                    (PK "Canditate 2")
+                )
+                (Role "voterID")
+                (Token "1" "vote")
+                (ChoiceValue
+                    (ChoiceId
+                        "2"
+                        (Role "voterID")
+                    ))
+            )
+            Close ]
+        2
+        (When
+            [Case
+                (Deposit
+                    (AccountId
+                        0
+                        (PK "Canditate 3")
+                    )
+                    (Role "voterID")
+                    (Token "1" "vote")
+                    (ChoiceValue
+                        (ChoiceId
+                            "3"
+                            (Role "voterID")
+                        ))
+                )
+                Close ]
+            3
+            (When
+                [Case
+                    (Deposit
+                        (AccountId
+                            0
+                            (PK "Canditate 4")
+                        )
+                        (Role "voterID")
+                        (Token "1" "vote")
+                        (ChoiceValue
+                            (ChoiceId
+                                "4"
+                                (Role "voterID")
+                            ))
+                    )
+                    Close ]
+                4 Close 
+            )
+        )
+    )
